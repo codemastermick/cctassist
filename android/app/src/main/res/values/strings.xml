@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CCTAssist</string>
+    <string name="title_activity_main">CCTAssist</string>
+    <string name="package_name">CCTAssist.ionic.io</string>
+    <string name="custom_url_scheme">CCTAssist.ionic.io</string>
+</resources>

@@ -3,13 +3,13 @@
 
 	const menuItems = [
 		{
-			name: 'Hjem',
+			name: 'Home',
 			link: '/',
 			icon: home
 		},
 		{
 			name: 'Kontrast Kalkulator',
-			link: '/tools/kontrastKalkulator',
+			link: '/tools/contrastCalculator',
 			icon: calculator
 		},
 		{

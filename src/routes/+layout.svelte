@@ -44,13 +44,24 @@
 		Want to know what is happening more - follow me on Twitter - https://twitter.com/Tommertomm
 		Discord channel on Ionic server - https://discordapp.com/channels/520266681499779082/1049388501629681675
 	*/
+	import { loadTranslations, locale, t } from '$translations';
+	import type { LayoutLoad } from './$types';
+
+	export const load: LayoutLoad = async ({ url }) => {
+		const { pathname } = url;
+		const defaultLocale = 'en'; // get from cookie, user session, ...
+		const initLocale = locale.get() || defaultLocale; // set default if no locale already set
+		await loadTranslations(initLocale, pathname); // keep this just before the `return`
+
+		return {};
+	};
 </script>
 
 <ion-app>
 	<ion-menu content-id="main-content">
 		<ion-header>
 			<ion-toolbar>
-				<ion-title>Tools</ion-title>
+				<ion-title>{$t('common.tools')}</ion-title>
 			</ion-toolbar>
 		</ion-header>
 		<ion-content class="ion-padding">
@@ -64,7 +75,7 @@
 				<ion-buttons slot="start">
 					<ion-menu-button />
 				</ion-buttons>
-				<ion-title>Menu</ion-title>
+				<ion-title>{$t('common.menu')}</ion-title>
 			</ion-toolbar>
 		</ion-header>
 		<slot />

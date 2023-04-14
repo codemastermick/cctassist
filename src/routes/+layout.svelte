@@ -1,4 +1,4 @@
-<script lang='ts'>
+<script lang="ts">
 	import { setupIonicBase } from 'ionic-svelte';
 
 	/* Call Ionic's setup routine */
@@ -9,6 +9,9 @@
 
 	/* Theme variables */
 	import '../theme/variables.css';
+	import SideMenu from '$lib/components/SideMenu.svelte';
+	import Footer from '$lib/components/footer.svelte';
+	import Header from '$lib/components/header.svelte';
 
 	/*
 		This part - import 'ionic-svelte/components/all'; -  loads all components at once.
@@ -44,5 +47,27 @@
 </script>
 
 <ion-app>
-	<slot />
+	<ion-menu content-id="main-content">
+		<ion-header>
+			<ion-toolbar>
+				<ion-title>Tools</ion-title>
+			</ion-toolbar>
+		</ion-header>
+		<ion-content class="ion-padding">
+			<SideMenu />
+		</ion-content>
+	</ion-menu>
+	<div class="ion-page" id="main-content">
+		<Header />
+		<ion-header>
+			<ion-toolbar>
+				<ion-buttons slot="start">
+					<ion-menu-button />
+				</ion-buttons>
+				<ion-title>Menu</ion-title>
+			</ion-toolbar>
+		</ion-header>
+		<slot />
+		<Footer />
+	</div>
 </ion-app>

@@ -11,7 +11,11 @@ const config = {
 			assets: 'build',
 			fallback: 'index.html',
 			precompress: false
-		})
+		}),
+		alias: {
+			'$lib': './src/lib/',
+			'$translations': './src/lib/translations',
+		}
 	}
 };
 

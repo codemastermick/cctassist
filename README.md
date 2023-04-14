@@ -23,3 +23,16 @@ npx cap sync
 ```
 
 You can preview the production build with `npm run preview`.
+
+## Translations
+
+To add a new language to the app you can simply copy the entire `src/lib/translations/en` folder and then rename the folder to the ISO-3166 country code for the language you want to work on, then just go through all the json files and translate the value stored in each key. For example, if you were translating the common file to Norwegian:
+
+```
+# src/lib/translations/no/common.json
+{
+	"menu": "Meny",
+	"tools": "Verktøy",
+    ...
+}
+```

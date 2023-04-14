@@ -1,1 +1,1 @@
-<ion-text>Standardized reports works!</ion-text>
+<ion-text class="ion-align-self-center">Standardized reports works!</ion-text>

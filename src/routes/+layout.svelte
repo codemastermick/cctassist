@@ -46,6 +46,7 @@
 	*/
 	import { loadTranslations, locale, t } from '$translations';
 	import type { LayoutLoad } from './$types';
+	import DarkmodeToggle from '$lib/components/DarkmodeToggle.svelte';
 
 	export const load: LayoutLoad = async ({ url }) => {
 		const { pathname } = url;
@@ -69,13 +70,16 @@
 		</ion-content>
 	</ion-menu>
 	<div class="ion-page" id="main-content">
-		<Header />
 		<ion-header>
 			<ion-toolbar>
 				<ion-buttons slot="start">
 					<ion-menu-button />
+					<ion-title>{$t('common.menu')}</ion-title>
 				</ion-buttons>
-				<ion-title>{$t('common.menu')}</ion-title>
+				<Header />
+				<ion-buttons slot="end">
+					<DarkmodeToggle />
+				</ion-buttons>
 			</ion-toolbar>
 		</ion-header>
 		<slot />

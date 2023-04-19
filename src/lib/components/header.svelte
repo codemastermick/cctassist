@@ -1,6 +1,7 @@
 <script lang="ts">
 	import DarkmodeToggle from './DarkmodeToggle.svelte';
 	import hjertelogo from '../images/hjertelogo.svg';
+	import SideMenu from './SideMenu.svelte';
 </script>
 
 <div class="header">
@@ -11,16 +12,6 @@
 			alt="Stylized anatomically correct heart in bright colors"
 			src={hjertelogo}
 		/>
-		<div>
-			<div class="title_row">
-				<div class="spacer" />
-				<h2>CT Flash kontrastkalulator</h2>
-				<div class="spacer" />
-				<div class="pointer darkmode">
-					<DarkmodeToggle />
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 
